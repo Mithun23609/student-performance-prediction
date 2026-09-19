@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Prediction System</title>
+</head>
+
+<body>
+
+    <h1>Student Performance Prediction System</h1>
+
+    <form action="/predict" method="POST">
+
+        {% for feature in features %}
+            <label>{{ feature }}</label>
+            <input type="number" step="any" name="{{ feature }}" required>
+            <br><br>
+        {% endfor %}
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+</body>
+</html>
